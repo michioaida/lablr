@@ -1,24 +1,35 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'run', 'start' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'run', 'build' ]
 2 info using npm@2.8.3
 3 info using node@v0.10.33
-4 verbose stack Error: missing script: start
-4 verbose stack     at run (/usr/local/lib/node_modules/npm/lib/run-script.js:165:19)
-4 verbose stack     at /usr/local/lib/node_modules/npm/lib/run-script.js:81:5
-4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:345:5
-4 verbose stack     at checkBinReferences_ (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:309:45)
-4 verbose stack     at final (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:343:3)
-4 verbose stack     at then (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:113:5)
-4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:284:20
-4 verbose stack     at evalmachine.<anonymous>:207:20
-4 verbose stack     at OpenReq.Req.done (/usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:141:5)
-4 verbose stack     at OpenReq.done (/usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:61:22)
-5 verbose cwd /Users/michioaida/Sites/lablr
-6 error Darwin 13.3.0
-7 error argv "node" "/usr/local/bin/npm" "run" "start"
-8 error node v0.10.33
-9 error npm  v2.8.3
-10 error missing script: start
-11 error If you need help, you may report this error at:
-11 error     <https://github.com/npm/npm/issues>
-12 verbose exit [ 1, true ]
+4 verbose run-script [ 'prebuild', 'build', 'postbuild' ]
+5 info prebuild lablr@1.0.0
+6 info build lablr@1.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info lablr@1.0.0 Failed to exec build script
+9 verbose stack Error: lablr@1.0.0 build: `NODE_ENV=production webpack`
+9 verbose stack Exit status 8
+9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
+9 verbose stack     at EventEmitter.emit (events.js:98:17)
+9 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+9 verbose stack     at ChildProcess.emit (events.js:98:17)
+9 verbose stack     at maybeClose (child_process.js:756:16)
+9 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:823:5)
+10 verbose pkgid lablr@1.0.0
+11 verbose cwd /Users/michioaida/Sites/lablr
+12 error Darwin 13.3.0
+13 error argv "node" "/usr/local/bin/npm" "run" "build"
+14 error node v0.10.33
+15 error npm  v2.8.3
+16 error code ELIFECYCLE
+17 error lablr@1.0.0 build: `NODE_ENV=production webpack`
+17 error Exit status 8
+18 error Failed at the lablr@1.0.0 build script 'NODE_ENV=production webpack'.
+18 error This is most likely a problem with the lablr package,
+18 error not with npm itself.
+18 error Tell the author that this fails on your system:
+18 error     NODE_ENV=production webpack
+18 error You can get their info via:
+18 error     npm owner ls lablr
+18 error There is likely additional logging output above.
+19 verbose exit [ 1, true ]

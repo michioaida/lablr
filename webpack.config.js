@@ -4,5 +4,10 @@ module.exports = getConfig({
     in: 'src/app.js' , 
     out: 'public',
     html: true,
-    isDev: true
+    isDev: process.env.NODE_ENV !== 'production',
+    html: function () {
+        return {
+            '200.html': data.defaultTemplate()
+        }
+    }
 });
