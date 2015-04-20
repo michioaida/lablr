@@ -1,41 +1,14 @@
 import styles from './styles/main.styl'
 import Router from './router'
+import app from 'ampersand-app'
 
-window.app = {
+app.extend({
     init () {
         this.router = new Router();
         this.router.history.start();
     }
-}
-
-window.app.init();
-
-
-
-/**
-import React from 'react'
-import styles from './styles/main.styl'
-
-
-
-
-const Hello = React.createClass({
-    render() {
-        return <h1>Hello {this.props.name}</h1>
-    }
 })
 
-React.render(<Hello name="blahhk"/>, document.body);
+app.init();
 
-/**
-var React = require('react')
-
-var Hello = React.createClass({
-    render: function () {
-        return <h1>Hello {this.props.name}</h1>
-    }
-});
-
-React.render(<Hello name="blahhk"/>, document.body);
-
-**/
+window.app = app
