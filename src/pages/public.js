@@ -5,7 +5,7 @@ export default React.createClass({
         return (
             <div className='container'>
               <header role='banner'>
-                <h1>Labelr</h1>
+                <h1>Cool things</h1>
               </header>
               <div>
                 <p>We label stuff for you, because, we can&trade;</p>
