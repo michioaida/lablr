@@ -5,7 +5,7 @@ module.exports = getConfig({
     out: 'public',
     html: true,
     isDev: process.env.NODE_ENV !== 'production',
-    html: function () {
+    html: function(data) {
         return {
             '200.html': data.defaultTemplate()
         }
