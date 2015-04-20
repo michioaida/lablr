@@ -1,8 +1,10 @@
 import React from 'react'
+import InternalNav from './components/internal-nav'
 
 export default React.createClass({
     render() {
         return (
+            <InternalNav>
             <div>
               <nav className='top-nav top-nav-light cf' role='navigation'>
                 <input id='menu-toggle' className='menu-toggle' type='checkbox'/>

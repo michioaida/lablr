@@ -1,5 +1,5 @@
 import React from 'react'
-import LocalLinks from 'local-links'
+import InternalNav from '../components/internal-nav.js'
 
 
 export default React.createClass({
@@ -14,17 +14,19 @@ export default React.createClass({
     },
     render() {
         return (
-            <div className='container' onClick={this.onClick}>
-              <header role='banner'>
-                <h1>Cool things</h1>
-              </header>
-              <div>
-                <p>We label stuff for you, because, we can&trade;</p>
-                <a href='/repos' className='button button-large'>
-                  <span className='mega-octicon octicon-mark-github'></span> Login with GitHub
-                </a>
-              </div>
-            </div>
+            <InternalNav>
+                <div className='container' onClick={this.onClick}>
+                  <header role='banner'>
+                    <h1>Cool things</h1>
+                  </header>
+                  <div>
+                    <p>We label stuff for you, because, we can&trade;</p>
+                    <a href='/repos' className='button button-large'>
+                      <span className='mega-octicon octicon-mark-github'></span> Login with GitHub
+                    </a>
+                  </div>
+                </div>
+            </InternalNav>
         )
     }
 })
