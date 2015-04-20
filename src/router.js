@@ -5,16 +5,26 @@ import PublicPage from './pages/public'
 import ReposPage from './pages/repos'
 
 export default Router.extend({
+    renderPage (Page, opts) {
+        const Main = (
+            <Layout>
+                <Page/>
+            </Layout>
+        )
+        
+        React.render(Main, document.body);
+    },
+    
     routes: {
         '': 'public', //Root directory
         'repos': 'repos'
     },
     
     public () {
-        React.render(<PublicPage/>, document.body)
+        this.renderPage(PublicPage)
     },
     
     repos () {
-        React.render(<ReposPage/>, document.body)
+        this.renderPage(ReposPage)
     }
 })
