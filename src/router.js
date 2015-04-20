@@ -3,6 +3,7 @@ import Router from 'ampersand-router'
 import React from 'react'
 import PublicPage from './pages/public'
 import ReposPage from './pages/repos'
+import Layout from './layout'
 
 export default Router.extend({
     renderPage (Page, opts) {
