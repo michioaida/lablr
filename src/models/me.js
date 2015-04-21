@@ -20,6 +20,8 @@ export default Model.extend(githubMixin, {
         this.on('change:token', () => {
             window.localStorage.token = this.token
         })
+        
+        this.on('change:isLoggedIn', this.fetchAll)
     },
 
     props: {
@@ -27,12 +29,20 @@ export default Model.extend(githubMixin, {
         login: 'string'
     },
     
-    derived: {
-        isLoggedIn: {
-            deps: ['token'],
+    derived: { // missing backbone
+        isLoggedIn: { //getter on an object
+            deps: ['token'], 
             fn () {
                 return !!this.token
             }
         }
-    }
+    },
+    
+    fetchAll () {
+        if (this.isLoggedIn) {        
+            this.fetch();
+            this.repos.fetch();
+        }
+    },
+    
 })
